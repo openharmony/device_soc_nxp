@@ -1,0 +1,339 @@
+# Copyright© 2021–2022 Beijing OSWare Technology Co., Ltd
+# This file contains confidential and proprietary information of
+# OSWare Technology Co., Ltd
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+
+ohos_prebuilt_shared_library("libnxp_g2d") {
+  source = "lib/libg2d.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_g2d_so_2") {
+  source = "lib/libg2d.so.2"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_g2d_viv") {
+  source = "lib/libg2d-viv.so.2.0.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gal") {
+  source = "lib/libGAL.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+####
+ohos_prebuilt_shared_library("libnxp_opencl_1") {
+  source = "lib/libOpenCL.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_vsc") {
+  source = "lib/libVSC.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_clc") {
+  source = "lib/gpu_lib/libCLC.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_egl") {
+  source = "lib/gpu_lib/libEGL.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_egl_1") {
+  source = "lib/gpu_lib/libEGL.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_egl_1_5") {
+  source = "lib/gpu_lib/libEGL.so.1.5.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gles_cl") {
+  source = "lib/gpu_lib/libGLES_CL.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gles_cl_1") {
+  source = "lib/gpu_lib/libGLES_CL.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gles_cl_1_1") {
+  source = "lib/gpu_lib/libGLES_CL.so.1.1.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gles_cm") {
+  source = "lib/gpu_lib/libGLES_CM.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gles_cm_1") {
+  source = "lib/gpu_lib/libGLES_CM.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gles_cm_1_1") {
+  source = "lib/gpu_lib/libGLES_CM.so.1.1.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv1_cl") {
+  source = "lib/gpu_lib/libGLESv1_CL.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv1_cl_1") {
+  source = "lib/gpu_lib/libGLESv1_CL.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv1_cl_1_1") {
+  source = "lib/gpu_lib/libGLESv1_CL.so.1.1.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv1_cm") {
+  source = "lib/gpu_lib/libGLESv1_CM.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv1_cm_1") {
+  source = "lib/gpu_lib/libGLESv1_CM.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv1_cm_1_1") {
+  source = "lib/gpu_lib/libGLESv1_CM.so.1.1.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv2") {
+  source = "lib/gpu_lib/libGLESv2.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv2_2") {
+  source = "lib/gpu_lib/libGLESv2.so.2"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glesv2_2_0") {
+  source = "lib/gpu_lib/libGLESv2.so.2.0.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_glslc") {
+  source = "lib/gpu_lib/libGLSLC.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gl") {
+  source = "lib/gpu_lib/libGL.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gl_1") {
+  source = "lib/gpu_lib/libGL.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_gl_1_2") {
+  source = "lib/gpu_lib/libGL.so.1.2.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_opencl") {
+  source = "lib/gpu_lib/libOpenCL.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_opencl_1_2") {
+  source = "lib/gpu_lib/libOpenCL.so.1.2.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_vg_2d_1_1") {
+  source = "lib/gpu_lib/libOpenVG.2d.so.1.1.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_vg_3d_1_1") {
+  source = "lib/gpu_lib/libOpenVG.3d.so.1.1.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_vg") {
+  source = "lib/gpu_lib/libOpenVG.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_vg_1") {
+  source = "lib/gpu_lib/libOpenVG.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_vdk") {
+  source = "lib/gpu_lib/libVDK.so"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_vdk_1") {
+  source = "lib/gpu_lib/libVDK.so.1"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_vdk_1_2") {
+  source = "lib/gpu_lib/libVDK.so.1.2.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_wayland_server") {
+  source = "lib/gpu_lib/libwayland-server.so.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
+
+ohos_prebuilt_shared_library("libnxp_wayland_client") {
+  source = "lib/gpu_lib/libwayland-client.so.0"
+  install_enable = true
+  install_images = [ chipset_base_dir ]
+  subsystem_name = "hdf"
+  part_name = "display_device_driver"
+}
