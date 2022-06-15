@@ -8,9 +8,10 @@ G2D部分为iMX 8m mini硬件加速相关的代码，辅助display进行硬件�
 用于使用本iMX 8m mini的任何产品。
 
 #### 软件架构
-**![NXP_iMX8M架构图01](./tools/figures/NXP_IMX_8M.png)**
+**![NXP_iMX8M架构图01](./tools/figures/NXP_IMX_8M_Arch.png)**
 
-图1：NXP_iMX8M架构图01
+#### 软件架构说明
+**![NXP_iMX8M架构图说明02](./tools/figures/NXP_IMX_8M_Arch_Data.png)**
 
 #### 安装教程
 [参见board readme](https://gitee.com/openharmony-sig/device_board_osware/blob/master/imx8mm/README_zh.md)
@@ -53,6 +54,6 @@ G2D部分为iMX 8m mini硬件加速相关的代码，辅助display进行硬件�
 
 ## 相关仓库
 
-[vendor_osware](https://gitee.com/openharmony-sig/vendor_osware)
+* [vendor_osware](https://gitee.com/openharmony-sig/vendor_osware)
 
-[device_board_osware](https://gitee.com/openharmony-sig/device_board_osware)
+* [device_board_osware](https://gitee.com/openharmony-sig/device_board_osware)
