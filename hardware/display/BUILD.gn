@@ -57,7 +57,7 @@ ohos_shared_library("display_gralloc") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 config("def_display_device_pub_config") {
@@ -129,7 +129,7 @@ ohos_shared_library("display_device") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_shared_library("def_display_layer_video") {
@@ -159,7 +159,7 @@ ohos_shared_library("def_display_layer_video") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_shared_library("display_gfx") {
@@ -235,7 +235,7 @@ ohos_shared_library("display_gfx") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_shared_library("display_layer") {
@@ -271,5 +271,5 @@ ohos_shared_library("display_layer") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
