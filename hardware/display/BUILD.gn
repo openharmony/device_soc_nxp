@@ -1,5 +1,5 @@
 # Copyright (C) 2021–2022 Beijing OSWare Technology Co., Ltd
-# This file contains confidential and proprietary information of 
+# This file contains confidential and proprietary information of
 # OSWare Technology Co., Ltd
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -57,7 +57,7 @@ ohos_shared_library("display_gralloc") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 config("def_display_device_pub_config") {
@@ -112,8 +112,8 @@ ohos_shared_library("display_device") {
   ]
 
   deps = [
-    ":display_gralloc",
     ":def_display_layer_video",
+    ":display_gralloc",
     "//third_party/libdrm:libdrm",
   ]
 
@@ -129,7 +129,7 @@ ohos_shared_library("display_device") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_shared_library("def_display_layer_video") {
@@ -159,7 +159,7 @@ ohos_shared_library("def_display_layer_video") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_shared_library("display_gfx") {
@@ -171,52 +171,52 @@ ohos_shared_library("display_gfx") {
     "//drivers/peripheral/display/interfaces/include",
     "//base/hiviewdfx/hilog_lite/interfaces/native/innerkits",
     "//drivers/peripheral/base",
-    "//device/soc/nxp/hardware/g2d/include"
+    "//device/soc/nxp/hardware/g2d/include",
   ]
 
-  deps = [ 
-          "//third_party/bounds_checking_function:libsec_shared",
-          "//device/soc/nxp/hardware/g2d:libnxp_g2d",
-          "//device/soc/nxp/hardware/g2d:libnxp_g2d_so_2",
-          "//device/soc/nxp/hardware/g2d:libnxp_g2d_viv",
-          "//device/soc/nxp/hardware/g2d:libnxp_gal",
-          "//device/soc/nxp/hardware/g2d:libnxp_opencl_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_vsc",
-          "//device/soc/nxp/hardware/g2d:libnxp_clc",
-          "//device/soc/nxp/hardware/g2d:libnxp_egl",
-          "//device/soc/nxp/hardware/g2d:libnxp_egl_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_egl_1_5",
-          "//device/soc/nxp/hardware/g2d:libnxp_gles_cl",
-          "//device/soc/nxp/hardware/g2d:libnxp_gles_cl_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_gles_cl_1_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_gles_cm",
-          "//device/soc/nxp/hardware/g2d:libnxp_gles_cm_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_gles_cm_1_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cl",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cl_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cl_1_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cm",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cm_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cm_1_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv2",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv2_2",
-          "//device/soc/nxp/hardware/g2d:libnxp_glesv2_2_0",
-          "//device/soc/nxp/hardware/g2d:libnxp_glslc",
-          "//device/soc/nxp/hardware/g2d:libnxp_gl",
-          "//device/soc/nxp/hardware/g2d:libnxp_gl_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_gl_1_2",
-          "//device/soc/nxp/hardware/g2d:libnxp_opencl",
-          "//device/soc/nxp/hardware/g2d:libnxp_opencl_1_2",
-          "//device/soc/nxp/hardware/g2d:libnxp_vg_2d_1_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_vg_3d_1_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_vg",
-          "//device/soc/nxp/hardware/g2d:libnxp_vg_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_vdk",
-          "//device/soc/nxp/hardware/g2d:libnxp_vdk_1",
-          "//device/soc/nxp/hardware/g2d:libnxp_vdk_1_2",
-          "//device/soc/nxp/hardware/g2d:libnxp_wayland_server",
-          "//device/soc/nxp/hardware/g2d:libnxp_wayland_client"
-         ]
+  deps = [
+    "//device/soc/nxp/hardware/g2d:libnxp_clc",
+    "//device/soc/nxp/hardware/g2d:libnxp_egl",
+    "//device/soc/nxp/hardware/g2d:libnxp_egl_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_egl_1_5",
+    "//device/soc/nxp/hardware/g2d:libnxp_g2d",
+    "//device/soc/nxp/hardware/g2d:libnxp_g2d_so_2",
+    "//device/soc/nxp/hardware/g2d:libnxp_g2d_viv",
+    "//device/soc/nxp/hardware/g2d:libnxp_gal",
+    "//device/soc/nxp/hardware/g2d:libnxp_gl",
+    "//device/soc/nxp/hardware/g2d:libnxp_gl_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_gl_1_2",
+    "//device/soc/nxp/hardware/g2d:libnxp_gles_cl",
+    "//device/soc/nxp/hardware/g2d:libnxp_gles_cl_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_gles_cl_1_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_gles_cm",
+    "//device/soc/nxp/hardware/g2d:libnxp_gles_cm_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_gles_cm_1_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cl",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cl_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cl_1_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cm",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cm_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv1_cm_1_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv2",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv2_2",
+    "//device/soc/nxp/hardware/g2d:libnxp_glesv2_2_0",
+    "//device/soc/nxp/hardware/g2d:libnxp_glslc",
+    "//device/soc/nxp/hardware/g2d:libnxp_opencl",
+    "//device/soc/nxp/hardware/g2d:libnxp_opencl_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_opencl_1_2",
+    "//device/soc/nxp/hardware/g2d:libnxp_vdk",
+    "//device/soc/nxp/hardware/g2d:libnxp_vdk_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_vdk_1_2",
+    "//device/soc/nxp/hardware/g2d:libnxp_vg",
+    "//device/soc/nxp/hardware/g2d:libnxp_vg_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_vg_2d_1_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_vg_3d_1_1",
+    "//device/soc/nxp/hardware/g2d:libnxp_vsc",
+    "//device/soc/nxp/hardware/g2d:libnxp_wayland_client",
+    "//device/soc/nxp/hardware/g2d:libnxp_wayland_server",
+    "//third_party/bounds_checking_function:libsec_shared",
+  ]
   external_deps = [
     "device_driver_framework:libhdf_utils",
     "hiviewdfx_hilog_native:libhilog",
@@ -235,7 +235,7 @@ ohos_shared_library("display_gfx") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_shared_library("display_layer") {
@@ -271,5 +271,5 @@ ohos_shared_library("display_layer") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }

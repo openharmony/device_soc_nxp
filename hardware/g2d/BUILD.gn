@@ -22,7 +22,7 @@ ohos_prebuilt_shared_library("libnxp_g2d") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_g2d_so_2") {
@@ -30,7 +30,7 @@ ohos_prebuilt_shared_library("libnxp_g2d_so_2") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_g2d_viv") {
@@ -38,7 +38,7 @@ ohos_prebuilt_shared_library("libnxp_g2d_viv") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gal") {
@@ -46,7 +46,7 @@ ohos_prebuilt_shared_library("libnxp_gal") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ####
@@ -55,7 +55,7 @@ ohos_prebuilt_shared_library("libnxp_opencl_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_vsc") {
@@ -63,7 +63,7 @@ ohos_prebuilt_shared_library("libnxp_vsc") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_clc") {
@@ -71,7 +71,7 @@ ohos_prebuilt_shared_library("libnxp_clc") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_egl") {
@@ -79,7 +79,7 @@ ohos_prebuilt_shared_library("libnxp_egl") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_egl_1") {
@@ -87,7 +87,7 @@ ohos_prebuilt_shared_library("libnxp_egl_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_egl_1_5") {
@@ -95,7 +95,7 @@ ohos_prebuilt_shared_library("libnxp_egl_1_5") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gles_cl") {
@@ -103,7 +103,7 @@ ohos_prebuilt_shared_library("libnxp_gles_cl") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gles_cl_1") {
@@ -111,7 +111,7 @@ ohos_prebuilt_shared_library("libnxp_gles_cl_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gles_cl_1_1") {
@@ -119,7 +119,7 @@ ohos_prebuilt_shared_library("libnxp_gles_cl_1_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gles_cm") {
@@ -127,7 +127,7 @@ ohos_prebuilt_shared_library("libnxp_gles_cm") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gles_cm_1") {
@@ -135,7 +135,7 @@ ohos_prebuilt_shared_library("libnxp_gles_cm_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gles_cm_1_1") {
@@ -143,7 +143,7 @@ ohos_prebuilt_shared_library("libnxp_gles_cm_1_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv1_cl") {
@@ -151,7 +151,7 @@ ohos_prebuilt_shared_library("libnxp_glesv1_cl") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv1_cl_1") {
@@ -159,7 +159,7 @@ ohos_prebuilt_shared_library("libnxp_glesv1_cl_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv1_cl_1_1") {
@@ -167,7 +167,7 @@ ohos_prebuilt_shared_library("libnxp_glesv1_cl_1_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv1_cm") {
@@ -175,7 +175,7 @@ ohos_prebuilt_shared_library("libnxp_glesv1_cm") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv1_cm_1") {
@@ -183,7 +183,7 @@ ohos_prebuilt_shared_library("libnxp_glesv1_cm_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv1_cm_1_1") {
@@ -191,7 +191,7 @@ ohos_prebuilt_shared_library("libnxp_glesv1_cm_1_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv2") {
@@ -199,7 +199,7 @@ ohos_prebuilt_shared_library("libnxp_glesv2") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv2_2") {
@@ -207,7 +207,7 @@ ohos_prebuilt_shared_library("libnxp_glesv2_2") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glesv2_2_0") {
@@ -215,7 +215,7 @@ ohos_prebuilt_shared_library("libnxp_glesv2_2_0") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_glslc") {
@@ -223,7 +223,7 @@ ohos_prebuilt_shared_library("libnxp_glslc") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gl") {
@@ -231,7 +231,7 @@ ohos_prebuilt_shared_library("libnxp_gl") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gl_1") {
@@ -239,7 +239,7 @@ ohos_prebuilt_shared_library("libnxp_gl_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_gl_1_2") {
@@ -247,7 +247,7 @@ ohos_prebuilt_shared_library("libnxp_gl_1_2") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_opencl") {
@@ -255,7 +255,7 @@ ohos_prebuilt_shared_library("libnxp_opencl") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_opencl_1_2") {
@@ -263,7 +263,7 @@ ohos_prebuilt_shared_library("libnxp_opencl_1_2") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_vg_2d_1_1") {
@@ -271,7 +271,7 @@ ohos_prebuilt_shared_library("libnxp_vg_2d_1_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_vg_3d_1_1") {
@@ -279,7 +279,7 @@ ohos_prebuilt_shared_library("libnxp_vg_3d_1_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_vg") {
@@ -287,7 +287,7 @@ ohos_prebuilt_shared_library("libnxp_vg") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_vg_1") {
@@ -295,7 +295,7 @@ ohos_prebuilt_shared_library("libnxp_vg_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_vdk") {
@@ -303,7 +303,7 @@ ohos_prebuilt_shared_library("libnxp_vdk") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_vdk_1") {
@@ -311,7 +311,7 @@ ohos_prebuilt_shared_library("libnxp_vdk_1") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_vdk_1_2") {
@@ -319,7 +319,7 @@ ohos_prebuilt_shared_library("libnxp_vdk_1_2") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_wayland_server") {
@@ -327,7 +327,7 @@ ohos_prebuilt_shared_library("libnxp_wayland_server") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
 
 ohos_prebuilt_shared_library("libnxp_wayland_client") {
@@ -335,5 +335,5 @@ ohos_prebuilt_shared_library("libnxp_wayland_client") {
   install_enable = true
   install_images = [ chipset_base_dir ]
   subsystem_name = "hdf"
-  part_name = "display_device_driver"
+  part_name = "drivers_peripheral_display"
 }
