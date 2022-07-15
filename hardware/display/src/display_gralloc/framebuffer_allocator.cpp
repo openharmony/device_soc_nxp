@@ -19,7 +19,6 @@
 #include <fcntl.h>
 #include <cerrno>
 #include <securec.h>
-#include <linux/fb.h>
 #include "display_common.h"
 #include "display_adapter.h"
 namespace OHOS {
