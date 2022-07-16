@@ -15,6 +15,7 @@
 # limitations under the License.
 
 import("//build/ohos.gni")
+import("//drivers/hdf_core/adapter/uhdf2/uhdf.gni")
 
 group("display_group") {
   deps = [
@@ -46,10 +47,10 @@ ohos_shared_library("display_gralloc") {
   deps = [
     "//third_party/libdrm:libdrm",
     "//utils/memory/libdmabufheap:libdmabufheap",
+    "$hdf_uhdf_path/utils:libhdf_utils",
   ]
 
   external_deps = [
-    "device_driver_framework:libhdf_utils",
     "hiviewdfx_hilog_native:libhilog",
     "utils_base:utils",
   ]
@@ -114,13 +115,13 @@ ohos_shared_library("display_device") {
   deps = [
     ":def_display_layer_video",
     ":display_gralloc",
+    "$hdf_uhdf_path/utils:libhdf_utils",
     "//third_party/libdrm:libdrm",
   ]
 
   cflags = [ "-Wno-unused-function" ]
 
   external_deps = [
-    "device_driver_framework:libhdf_utils",
     "hitrace_native:hitrace_meter",
     "hiviewdfx_hilog_native:libhilog",
     "utils_base:utils",
@@ -144,11 +145,14 @@ ohos_shared_library("def_display_layer_video") {
     "//drivers/adapter/uhdf2/include/hdi",
   ]
 
+  deps = [
+    "$hdf_uhdf_path/host:libhdf_host",
+    "$hdf_uhdf_path/ipc:libhdf_ipc_adapter",
+    "$hdf_uhdf_path/utils:libhdf_utils",
+    "$hdf_uhdf_path/hdi:libhdi",
+  ]
+
   external_deps = [
-    "device_driver_framework:libhdf_host",
-    "device_driver_framework:libhdf_ipc_adapter",
-    "device_driver_framework:libhdf_utils",
-    "device_driver_framework:libhdi",
     "hiviewdfx_hilog_native:libhilog",
     "ipc:ipc_single",
     "utils_base:utils",
@@ -216,9 +220,9 @@ ohos_shared_library("display_gfx") {
     "//device/soc/nxp/hardware/g2d:libnxp_wayland_client",
     "//device/soc/nxp/hardware/g2d:libnxp_wayland_server",
     "//third_party/bounds_checking_function:libsec_shared",
+    "$hdf_uhdf_path/utils:libhdf_utils",
   ]
   external_deps = [
-    "device_driver_framework:libhdf_utils",
     "hiviewdfx_hilog_native:libhilog",
     "utils_base:utils",
   ]
@@ -251,9 +255,11 @@ ohos_shared_library("display_layer") {
     "//base/hiviewdfx/hilog_lite/interfaces/native/innerkits",
     "//drivers/peripheral/base",
   ]
-  deps = [ "//third_party/bounds_checking_function:libsec_shared" ]
+  deps = [ 
+    "//third_party/bounds_checking_function:libsec_shared",
+    "$hdf_uhdf_path/utils:libhdf_utils", 
+  ]
   external_deps = [
-    "device_driver_framework:libhdf_utils",
     "hiviewdfx_hilog_native:libhilog",
     "utils_base:utils",
   ]

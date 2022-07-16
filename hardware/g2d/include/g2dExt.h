@@ -41,17 +41,14 @@
 extern "C"  {
 #endif
 
-struct g2d_tile_status
-{
+struct g2d_tile_status {
     unsigned int ts_addr;
-
     unsigned int fc_enabled;
     unsigned int fc_value;
     unsigned int fc_value_upper;
 };
 
-enum g2d_tiling
-{
+enum g2d_tiling {
     G2D_LINEAR              = 0x1,
     G2D_TILED               = 0x2,
     G2D_SUPERTILED          = 0x4,
@@ -60,11 +57,9 @@ enum g2d_tiling
     G2D_TILED_STATUS        = 0x20,
 };
 
-struct g2d_surfaceEx
-{
+struct g2d_surfaceEx {
     struct g2d_surface base;
     enum   g2d_tiling tiling;
-
     struct g2d_tile_status ts;
     int reserved[8];
 };
