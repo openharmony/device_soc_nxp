@@ -56,38 +56,36 @@ extern "C"  {
 #define G2D_VERSION_MINOR   2
 #define G2D_VERSION_PATCH   0
 
-enum g2d_format
-{
+enum g2d_format {
 // rgb formats
-     G2D_RGB565               = 0,
-     G2D_RGBA8888             = 1,
-     G2D_RGBX8888             = 2,
-     G2D_BGRA8888             = 3,
-     G2D_BGRX8888             = 4,
-     G2D_BGR565               = 5,
+    G2D_RGB565               = 0,
+    G2D_RGBA8888             = 1,
+    G2D_RGBX8888             = 2,
+    G2D_BGRA8888             = 3,
+    G2D_BGRX8888             = 4,
+    G2D_BGR565               = 5,
 
-     G2D_ARGB8888             = 6,
-     G2D_ABGR8888             = 7,
-     G2D_XRGB8888             = 8,
-     G2D_XBGR8888             = 9,
-     G2D_RGB888               = 10,
+    G2D_ARGB8888             = 6,
+    G2D_ABGR8888             = 7,
+    G2D_XRGB8888             = 8,
+    G2D_XBGR8888             = 9,
+    G2D_RGB888               = 10,
 
 // yuv formats
-     G2D_NV12                 = 20,
-     G2D_I420                 = 21,
-     G2D_YV12                 = 22,
-     G2D_NV21                 = 23,
-     G2D_YUYV                 = 24,
-     G2D_YVYU                 = 25,
-     G2D_UYVY                 = 26,
-     G2D_VYUY                 = 27,
-     G2D_NV16                 = 28,
-     G2D_NV61                 = 29,
-     G2D_FORMAT_UNKNOWN       = -1,
+    G2D_NV12                 = 20,
+    G2D_I420                 = 21,
+    G2D_YV12                 = 22,
+    G2D_NV21                 = 23,
+    G2D_YUYV                 = 24,
+    G2D_YVYU                 = 25,
+    G2D_UYVY                 = 26,
+    G2D_VYUY                 = 27,
+    G2D_NV16                 = 28,
+    G2D_NV61                 = 29,
+    G2D_FORMAT_UNKNOWN       = -1,
 };
 
-enum g2d_blend_func
-{
+enum g2d_blend_func {
 // basic blend
     G2D_ZERO                  = 0,
     G2D_ONE                   = 1,
@@ -102,8 +100,7 @@ enum g2d_blend_func
     G2D_DEMULTIPLY_OUT_ALPHA  = 0x20,
 };
 
-enum g2d_cap_mode
-{
+enum g2d_cap_mode {
     G2D_BLEND                 = 0,
     G2D_DITHER                = 1,
     G2D_GLOBAL_ALPHA          = 2,  // only support source global alpha
@@ -113,8 +110,7 @@ enum g2d_cap_mode
     G2D_YUV_BT_709            = 6,  // yuv BT.709
 };
 
-enum g2d_feature
-{
+enum g2d_feature {
     G2D_SCALING               = 0,
     G2D_ROTATION,
     G2D_SRC_YUV,
@@ -122,8 +118,7 @@ enum g2d_feature
     G2D_MULTI_SOURCE_BLT,
 };
 
-enum g2d_rotation
-{
+enum g2d_rotation {
     G2D_ROTATION_0            = 0,
     G2D_ROTATION_90           = 1,
     G2D_ROTATION_180          = 2,
@@ -132,28 +127,24 @@ enum g2d_rotation
     G2D_FLIP_V                = 5,
 };
 
-enum g2d_cache_mode
-{
+enum g2d_cache_mode {
     G2D_CACHE_CLEAN           = 0,
     G2D_CACHE_FLUSH           = 1,
     G2D_CACHE_INVALIDATE      = 2,
 };
 
-enum g2d_hardware_type
-{
+enum g2d_hardware_type {
     G2D_HARDWARE_2D           = 0,  // default type
     G2D_HARDWARE_VG           = 1,
 };
 
-enum g2d_status
-{
-    G2D_STATUS_FAIL           =-1,
+enum g2d_status {
+    G2D_STATUS_FAIL           = -1,
     G2D_STATUS_OK             = 0,
     G2D_STATUS_NOT_SUPPORTED  = 1,
 };
 
-struct g2d_surface
-{
+struct g2d_surface {
     enum g2d_format format;
 
     int planes[3];  // surface buffer addresses are set in physical planes separately
@@ -186,14 +177,12 @@ struct g2d_surface
     enum g2d_rotation rot;
 };
 
-struct g2d_surface_pair
-{
+struct g2d_surface_pair {
     struct g2d_surface s;
     struct g2d_surface d;
 };
 
-struct g2d_buf
-{
+struct g2d_buf {
     void *buf_handle;
     void *buf_vaddr;
     int  buf_paddr;

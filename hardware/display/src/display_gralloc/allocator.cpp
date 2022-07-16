@@ -162,7 +162,10 @@ int32_t Allocator::AllocMem(const AllocInfo &info, BufferHandle **handle)
     DISPLAY_CHK_RETURN((ret != DISPLAY_SUCCESS), DISPLAY_NOT_SUPPORT, DISPLAY_LOGE("failed to convert to bufferInfo"));
 
     BufferHandle *priBuffer = (BufferHandle *)malloc(sizeof(BufferHandle));
-    DISPLAY_CHK_RETURN((priBuffer == nullptr), DISPLAY_NOT_SUPPORT, DISPLAY_LOGE("can not alloc memory"));
+    if (priBuffer == NULL) {
+        DISPLAY_LOGE("failed to malloc memory!");
+        return DISPLAY_FAILURE;
+    }
     (void)memset_s(priBuffer, sizeof(BufferHandle), 0, sizeof(BufferHandle));
     priBuffer->fd = -1;
     priBuffer->width = bufferInfo.width_;
