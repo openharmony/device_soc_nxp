@@ -29,12 +29,13 @@
 namespace OHOS {
 namespace HDI {
 namespace DISPLAY {
+const int pmode = 777;
 int32_t DrmAllocator::Init()
 {
     DISPLAY_LOGD();
     int32_t ret;
 
-    ret = chmod(FILE_PATH, 0777);
+    ret = chmod(FILE_PATH, pmode);
     if (ret == 0) {
         DISPLAY_LOGD("drm file:%{public}s chmod success", FILE_PATH);
     } else {
