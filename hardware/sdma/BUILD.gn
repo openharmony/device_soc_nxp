@@ -23,7 +23,5 @@ ohos_prebuilt_etc("sdma_imx7d_bin") {
 }
 
 group("sdma") {
-  deps = [
-    ":sdma_imx7d_bin"
-  ]
+  deps = [ ":sdma_imx7d_bin" ]
 }
