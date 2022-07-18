@@ -21,6 +21,7 @@
 #include <fcntl.h>
 #include <securec.h>
 #include <xf86drm.h>
+#include <sys/stat.h>
 #include <xf86drmMode.h>
 #include "display_common.h"
 #include "drm_fourcc.h"
@@ -28,10 +29,19 @@
 namespace OHOS {
 namespace HDI {
 namespace DISPLAY {
+const int pmode = 777;
 int32_t DrmAllocator::Init()
 {
     DISPLAY_LOGD();
     int32_t ret;
+
+    ret = chmod(FILE_PATH, pmode);
+    if (ret == 0) {
+        DISPLAY_LOGD("drm file:%{public}s chmod success", FILE_PATH);
+    } else {
+        DISPLAY_LOGD("drm file:%{public}s chmod failed", FILE_PATH);
+    }
+
     drmFd_ = open(FILE_PATH, O_RDWR);
     DISPLAY_CHK_RETURN((drmFd_ < 0), DISPLAY_FAILURE,
         DISPLAY_LOGE("can not open drm file : %{public}s errno: %{public}d ", FILE_PATH, errno));

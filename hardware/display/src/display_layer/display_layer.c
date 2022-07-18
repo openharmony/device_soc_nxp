@@ -17,7 +17,6 @@
  */
 
 #include "display_layer.h"
-#include <cerrno>
 #include <pthread.h>
 #include <stdio.h>
 #include <unistd.h>
