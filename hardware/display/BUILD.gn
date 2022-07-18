@@ -45,9 +45,9 @@ ohos_shared_library("display_gralloc") {
   output_name = "display_gralloc"
   cflags = [ "-Wno-macro-redefined" ]
   deps = [
+    "$hdf_uhdf_path/utils:libhdf_utils",
     "//third_party/libdrm:libdrm",
     "//utils/memory/libdmabufheap:libdmabufheap",
-    "$hdf_uhdf_path/utils:libhdf_utils",
   ]
 
   external_deps = [
@@ -146,10 +146,10 @@ ohos_shared_library("def_display_layer_video") {
   ]
 
   deps = [
+    "$hdf_uhdf_path/hdi:libhdi",
     "$hdf_uhdf_path/host:libhdf_host",
     "$hdf_uhdf_path/ipc:libhdf_ipc_adapter",
     "$hdf_uhdf_path/utils:libhdf_utils",
-    "$hdf_uhdf_path/hdi:libhdi",
   ]
 
   external_deps = [
@@ -179,6 +179,7 @@ ohos_shared_library("display_gfx") {
   ]
 
   deps = [
+    "$hdf_uhdf_path/utils:libhdf_utils",
     "//device/soc/nxp/hardware/g2d:libnxp_clc",
     "//device/soc/nxp/hardware/g2d:libnxp_egl",
     "//device/soc/nxp/hardware/g2d:libnxp_egl_1",
@@ -220,7 +221,6 @@ ohos_shared_library("display_gfx") {
     "//device/soc/nxp/hardware/g2d:libnxp_wayland_client",
     "//device/soc/nxp/hardware/g2d:libnxp_wayland_server",
     "//third_party/bounds_checking_function:libsec_shared",
-    "$hdf_uhdf_path/utils:libhdf_utils",
   ]
   external_deps = [
     "hiviewdfx_hilog_native:libhilog",
@@ -255,9 +255,9 @@ ohos_shared_library("display_layer") {
     "//base/hiviewdfx/hilog_lite/interfaces/native/innerkits",
     "//drivers/peripheral/base",
   ]
-  deps = [ 
+  deps = [
+    "$hdf_uhdf_path/utils:libhdf_utils",
     "//third_party/bounds_checking_function:libsec_shared",
-    "$hdf_uhdf_path/utils:libhdf_utils", 
   ]
   external_deps = [
     "hiviewdfx_hilog_native:libhilog",
