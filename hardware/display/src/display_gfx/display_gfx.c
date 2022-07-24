@@ -124,15 +124,15 @@ int32_t TransformTypeChange(TransformType type)
 
 int32_t Imx8mmFillRect(ISurface *surface, IRect *rect, uint32_t color, GfxOpt *opt)
 {
-    int errno = 0;
+    int err = 0;
     CHECK_NULLPOINTER_RETURN_VALUE(surface, DISPLAY_NULL_PTR);
     CHECK_NULLPOINTER_RETURN_VALUE(rect, DISPLAY_NULL_PTR);
     CHECK_NULLPOINTER_RETURN_VALUE(opt, DISPLAY_NULL_PTR);
 
     struct g2d_surface dst_surfase;
 
-    errno = memset_s(&dst_surfase, sizeof(dst_surfase), 0x00, sizeof(dst_surfase));
-    if (errno != 0) {
+    err = memset_s(&dst_surfase, sizeof(dst_surfase), 0x00, sizeof(dst_surfase));
+    if (err != 0) {
         HDF_LOGE("%s: memset_s failed", __func__);
     }
 
@@ -164,17 +164,17 @@ int32_t Imx8mmFillRect(ISurface *surface, IRect *rect, uint32_t color, GfxOpt *o
 
 int32_t Imx8mmBlit(ISurface *srcSurface, IRect *srcRect, ISurface *dstSurface, IRect *dstRect, GfxOpt *opt)
 {
-    int errno = 0;
+    int err = 0;
     struct g2d_surface src_surfase;
     struct g2d_surface dst_surfase;
 
-    errno = memset_s(&src_surfase, sizeof(src_surfase), 0x00, sizeof(src_surfase));
-    if (errno != 0) {
+    err = memset_s(&src_surfase, sizeof(src_surfase), 0x00, sizeof(src_surfase));
+    if (err != 0) {
         HDF_LOGE("%s: memset_s failed", __func__);
     }
 
-    errno = memset_s(&dst_surfase, sizeof(src_surfase), 0x00, sizeof(dst_surfase));
-    if (errno != 0) {
+    err = memset_s(&dst_surfase, sizeof(src_surfase), 0x00, sizeof(dst_surfase));
+    if (err != 0) {
         HDF_LOGE("%s: memset_s failed", __func__);
     }
 
