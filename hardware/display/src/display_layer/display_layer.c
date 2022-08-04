@@ -192,29 +192,32 @@ static int32_t GetInfo(uint32_t devId, struct DispInfo *info)
     }
     if (!HdfSbufWriteUint32(data, devId)) {
         HDF_LOGE("HdfSbufWriteUint32 failure");
-        goto ERR;
+        HdfSbufRecycle(data);
+        HdfSbufRecycle(reply);
+        return DISPLAY_FAILURE;
     }
     if (DispCmdSend(DISP_CMD_GET_PANELINFO, data, reply) != DISPLAY_SUCCESS) {
         HDF_LOGE("cmd:DISP_CMD_GET_PANEL_INFO failure");
-        goto ERR;
+        HdfSbufRecycle(data);
+        HdfSbufRecycle(reply);
+        return DISPLAY_FAILURE;
     }
     uint32_t dataSize = 0;
     if (!HdfSbufReadBuffer(reply, (const void **)(&tmpInfo), &dataSize) || dataSize != sizeof(struct DispInfo)) {
         HDF_LOGE("HdfSbufReadBuffer failure");
-        goto ERR;
+        HdfSbufRecycle(data);
+        HdfSbufRecycle(reply);
+        return DISPLAY_FAILURE;
     }
     if (memcpy_s(info, sizeof(struct DispInfo), tmpInfo, dataSize) != EOK) {
         HDF_LOGE("memcpy_s failure");
-        goto ERR;
+        HdfSbufRecycle(data);
+        HdfSbufRecycle(reply);
+        return DISPLAY_FAILURE;
     }
     HdfSbufRecycle(data);
     HdfSbufRecycle(reply);
     return DISPLAY_SUCCESS;
-
-ERR:
-    HdfSbufRecycle(data);
-    HdfSbufRecycle(reply);
-    return DISPLAY_FAILURE;
 }
 
 static struct LayerPrivate *GetLayerInstance(void)
