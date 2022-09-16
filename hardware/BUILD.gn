@@ -17,7 +17,5 @@
 import("//build/ohos.gni")
 
 group("hardware_group") {
-  deps = [
-    "//device/soc/nxp/hardware/sdma:sdma"
-  ]
+  deps = [ "//device/soc/nxp/hardware/sdma:sdma" ]
 }
